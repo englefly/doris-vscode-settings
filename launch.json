@@ -8,7 +8,7 @@
             "mainClass": "org.apache.doris.DorisFE",
             "projectName": "fe-core",
             "javaExec": "/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home/bin/java",
-            // "args": "-r",
+            "args": "-r",
             // Classpath: conf dir first, then doris-fe.jar (must be first among jars),
             // then remaining jars in lib/. Mirrors the order in start_fe.sh.
             "classPaths": [
