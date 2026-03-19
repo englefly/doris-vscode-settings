@@ -6,8 +6,8 @@
             "name": "DorisFE",
             "request": "launch",
             "mainClass": "org.apache.doris.DorisFE",
-            "projectName": "fe-core",
-            "javaExec": "/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home/bin/java",
+            // "projectName": "fe-core",
+            "javaExec": "/mnt/disk4/zhouminghong/jdk-17.0.10/bin/java",
             // "args": "-r",
             // Classpath: conf dir first, then doris-fe.jar (must be first among jars),
             // then remaining jars in lib/. Mirrors the order in start_fe.sh.
@@ -18,7 +18,8 @@
             ],
             // JVM args from JAVA_OPTS_FOR_JDK_17 in fe.conf, plus mandatory options
             // added by start_fe.sh. GC log removed (not useful in debug mode).
-            "vmArgs": "-Dfile.encoding=UTF-8 -Djavax.security.auth.useSubjectCredsOnly=false -Xmx8192m -Xms8192m -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=${workspaceFolder}/output/fe/log -Darrow.enable_null_check_for_get=false -Dhadoop.shell.setsid.enabled=false -Dsun.security.krb5.debug=true -XX:-OmitStackTraceInFastThrow --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.lang.invoke=ALL-UNNAMED --add-opens=java.base/java.lang.reflect=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED --add-opens=java.base/java.nio=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED --add-opens=java.base/sun.nio.ch=ALL-UNNAMED --add-opens=java.base/sun.nio.cs=ALL-UNNAMED --add-opens=java.base/sun.security.action=ALL-UNNAMED --add-opens=java.base/sun.util.calendar=ALL-UNNAMED --add-opens=java.security.jgss/sun.security.krb5=ALL-UNNAMED --add-opens=java.management/sun.management=ALL-UNNAMED --add-opens=java.base/jdk.internal.ref=ALL-UNNAMED --add-opens=java.xml/com.sun.org.apache.xerces.internal.jaxp=ALL-UNNAMED",
+            "vmArgs": "-Dfile.encoding=UTF-8 -Djavax.security.auth.useSubjectCredsOnly=false -Xmx8192m -Xms8192m -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=${workspaceFolder}/output/fe/log -Darrow.enable_null_check_for_get=false -Dhadoop.shell.setsid.enabled=false -Dsun.security.krb5.debug=true -XX:-OmitStackTraceInFastThrow",
+            //--add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.lang.invoke=ALL-UNNAMED --add-opens=java.base/java.lang.reflect=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED --add-opens=java.base/java.nio=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED --add-opens=java.base/sun.nio.ch=ALL-UNNAMED --add-opens=java.base/sun.nio.cs=ALL-UNNAMED --add-opens=java.base/sun.security.action=ALL-UNNAMED --add-opens=java.base/sun.util.calendar=ALL-UNNAMED --add-opens=java.security.jgss/sun.security.krb5=ALL-UNNAMED --add-opens=java.management/sun.management=ALL-UNNAMED --add-opens=java.base/jdk.internal.ref=ALL-UNNAMED --add-opens=java.xml/com.sun.org.apache.xerces.internal.jaxp=ALL-UNNAMED",
             "env": {
                 "DORIS_HOME": "${workspaceFolder}/output/fe",
                 "LOG_DIR": "${workspaceFolder}/output/fe/log",
