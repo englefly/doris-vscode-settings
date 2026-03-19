@@ -1,0 +1,64 @@
+{
+    "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx8G -Xms100m -Xlog:disable -Dmaven.multiModuleProjectDirectory=/Users/englefly/work/doris/fe -Dmaven.build.cache.enabled=false",
+    "java.progressReports.enabled": false,
+    "java.referencesCodeLens.enabled": false,
+    "java.implementationsCodeLens.enabled": false,
+    "java.autobuild.enabled": false,
+    "java.debug.settings.forceBuildBeforeLaunch": false,
+
+    "java.import.exclusions": [
+        "be/**",
+        "fe/be-java-extensions/**",
+        "fe/hive-udf/**",
+        "fe/spark-dpp/**",
+        "fe/fe-core/src/test/**",
+        "fe_plugins/**",
+        "fe_brokers/**",
+        "regression-test/**",
+        "thirdparty/**",
+        "tools/**",
+        "ui/**",
+        "sdk/**",
+        "extension/**",
+    ],
+    // Checkstyle 配置
+    "java.checkstyle.configuration": "${workspaceFolder}/fe/check/checkstyle/checkstyle.xml",
+    "java.checkstyle.version": "13.2.0",
+    
+    "java.format.settings.url": "${workspaceFolder}/build-support/eclipse-code-format.xml",
+    "java.format.settings.profile": "Doris",
+    
+    // Java import 排序规则（符合 Checkstyle CustomImportOrder 规则）
+    // 顺序：SAME_PACKAGE(3) -> THIRD_PARTY_PACKAGE -> STANDARD_JAVA_PACKAGE
+    "java.completion.importOrder": [
+        "org.apache.doris",
+        "#",
+        "",
+        "java",
+        "javax"
+    ],
+    
+    // 保存时自动格式化和整理 import
+    "[java]": {
+        "editor.formatOnSave": false,
+        "editor.defaultFormatter": "redhat.java",
+        "editor.tabSize": 4,
+        "editor.insertSpaces": false,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": "always"
+        },
+        "editor.autoIndent": "full",
+        "editor.trimAutoWhitespace": true
+    },
+
+    // 显示 Checkstyle 问题
+    "java.checkstyle.autocheck": true,
+    
+    // 自动保存延迟（可选，给格式化留出时间）
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 1000,
+    "java.compile.nullAnalysis.mode": "disabled",
+    "java.configuration.maven.executable": "/opt/maven-3.9.12/bin/mvn",
+    "cmake.sourceDirectory": "/Users/englefly/work/doris/be",
+    "java.configuration.updateBuildConfiguration": "interactive"
+}
