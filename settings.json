@@ -48,7 +48,8 @@
             "source.organizeImports": "always"
         },
         "editor.autoIndent": "full",
-        "editor.trimAutoWhitespace": true
+        "editor.trimAutoWhitespace": true,
+        "editor.showUnused": true
     },
 
     // 显示 Checkstyle 问题
