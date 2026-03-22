@@ -38,6 +38,7 @@
         "javax"
     ],
     
+    "java.suggest.enableHover": false,
     // 保存时自动格式化和整理 import
     "[java]": {
         "editor.formatOnSave": false,
