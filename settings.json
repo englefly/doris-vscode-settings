@@ -62,5 +62,6 @@
     "java.compile.nullAnalysis.mode": "disabled",
     "java.configuration.maven.executable": "/opt/maven-3.9.12/bin/mvn",
     "cmake.sourceDirectory": "/Users/englefly/work/doris/be",
-    "java.configuration.updateBuildConfiguration": "interactive"
+    "java.configuration.updateBuildConfiguration": "disabled"
+
 }

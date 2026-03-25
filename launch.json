@@ -29,6 +29,14 @@
             },
             "cwd": "${workspaceFolder}/output/fe",
             "console": "internalConsole"
+        },
+        {
+            "type": "java",
+            "name": "Attach FE",
+            "request": "attach",
+            "hostName": "localhost",
+            "port": 5005,
+            "projectName": "fe-core"
         }
     ]
 }
