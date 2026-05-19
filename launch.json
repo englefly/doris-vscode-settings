@@ -6,7 +6,7 @@
             "name": "DorisFE",
             "request": "launch",
             "mainClass": "org.apache.doris.DorisFE",
-            // "projectName": "fe-core",
+            "projectName": "fe-core",
             "javaExec": "/mnt/disk4/zhouminghong/jdk-17.0.10/bin/java",
             // "args": "-r",
             // Classpath: conf dir first, then doris-fe.jar (must be first among jars),
@@ -15,6 +15,13 @@
                 "${workspaceFolder}/output/fe/conf",
                 "${workspaceFolder}/output/fe/lib/doris-fe.jar",
                 "${workspaceFolder}/output/fe/lib/*"
+            ],
+            "sourcePaths": [
+                "${workspaceFolder}/fe/fe-core/src/main/java",
+                "${workspaceFolder}/fe/fe-common/src/main/java",
+                "${workspaceFolder}/fe/fe-foundation/src/main/java",
+                "${workspaceFolder}/fe/fe-catalog/src/main/java",
+                "${workspaceFolder}/fe/fe-type/src/main/java"
             ],
             // JVM args from JAVA_OPTS_FOR_JDK_17 in fe.conf, plus mandatory options
             // added by start_fe.sh. GC log removed (not useful in debug mode).
