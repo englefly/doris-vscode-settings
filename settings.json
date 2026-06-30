@@ -5,6 +5,8 @@
     "java.implementationsCodeLens.enabled": false,
     "java.autobuild.enabled": false,
     "java.debug.settings.forceBuildBeforeLaunch": false,
+    "java.debug.settings.showToString": true,
+    "java.debug.settings.showLogicalStructure": true,
 
     "java.import.exclusions": [
         "be/**",
@@ -38,6 +40,9 @@
         "javax"
     ],
     
+    // 保存时自动清除行尾空格，避免 Checkstyle trailing space 报错
+    "files.trimTrailingWhitespace": true,
+
     // 保存时自动格式化和整理 import
     "[java]": {
         "editor.formatOnSave": false,
@@ -60,6 +65,5 @@
     "java.compile.nullAnalysis.mode": "disabled",
     "java.configuration.maven.executable": "~/maven-3.9.12/bin/mvn",
     "cmake.sourceDirectory": "${workspaceFolder}/be",
-    "java.configuration.updateBuildConfiguration": "interactive",
-     "java.debug.settings.showLogicalStructure": true
+    "java.configuration.updateBuildConfiguration": "interactive"
 }
