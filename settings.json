@@ -1,10 +1,12 @@
 {
-    "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx8G -Xms100m -Xlog:disable -Dmaven.multiModuleProjectDirectory=/Users/englefly/work/doris/fe -Dmaven.build.cache.enabled=false",
+    "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx8G -Xms100m -Xlog:disable -Dmaven.multiModuleProjectDirectory=/mnt/disk4/zhouminghong/doris-master/fe -Dmaven.build.cache.enabled=false",
     "java.progressReports.enabled": false,
     "java.referencesCodeLens.enabled": false,
     "java.implementationsCodeLens.enabled": false,
     "java.autobuild.enabled": false,
     "java.debug.settings.forceBuildBeforeLaunch": false,
+    "java.debug.settings.showToString": true,
+    "java.debug.settings.showLogicalStructure": true,
 
     "java.import.exclusions": [
         "be/**",
@@ -24,10 +26,10 @@
     // Checkstyle 配置
     "java.checkstyle.configuration": "${workspaceFolder}/fe/check/checkstyle/checkstyle.xml",
     "java.checkstyle.version": "13.2.0",
-    
+
     "java.format.settings.url": "${workspaceFolder}/build-support/eclipse-code-format.xml",
     "java.format.settings.profile": "Doris",
-    
+
     // Java import 排序规则（符合 Checkstyle CustomImportOrder 规则）
     // 顺序：SAME_PACKAGE(3) -> THIRD_PARTY_PACKAGE -> STANDARD_JAVA_PACKAGE
     "java.completion.importOrder": [
@@ -37,7 +39,10 @@
         "java",
         "javax"
     ],
-    
+
+    // 保存时自动清除行尾空格，避免 Checkstyle trailing space 报错
+    "files.trimTrailingWhitespace": true,
+
     // 保存时自动格式化和整理 import
     "[java]": {
         "editor.formatOnSave": false,
@@ -53,13 +58,12 @@
 
     // 显示 Checkstyle 问题
     "java.checkstyle.autocheck": true,
-    
+
     // 自动保存延迟（可选，给格式化留出时间）
-    "files.autoSave": "afterDelay",
+    "files.autoSave": "off",
     "files.autoSaveDelay": 1000,
     "java.compile.nullAnalysis.mode": "disabled",
-    "java.configuration.maven.executable": "~/maven-3.9.12/bin/mvn",
+    "java.configuration.maven.executable": "/mnt/disk4/zhouminghong/maven-3.9.12/bin/mvn",
     "cmake.sourceDirectory": "${workspaceFolder}/be",
-    "java.configuration.updateBuildConfiguration": "interactive",
-     "java.debug.settings.showLogicalStructure": true
+    "java.configuration.updateBuildConfiguration": "interactive"
 }
