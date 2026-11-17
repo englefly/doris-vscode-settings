@@ -1,5 +1,5 @@
 {
-    "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx8G -Xms100m -Xlog:disable -Dmaven.multiModuleProjectDirectory=/mnt/disk4/zhouminghong/doris-master/fe -Dmaven.build.cache.enabled=false",
+    "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx8G -Xms100m -Xlog:disable -Dmaven.multiModuleProjectDirectory=${workspaceFolder}/fe -Dmaven.build.cache.enabled=false",
     "java.progressReports.enabled": false,
     "java.referencesCodeLens.enabled": false,
     "java.implementationsCodeLens.enabled": false,
@@ -63,7 +63,7 @@
     "files.autoSave": "off",
     "files.autoSaveDelay": 1000,
     "java.compile.nullAnalysis.mode": "disabled",
-    "java.configuration.maven.executable": "/mnt/disk4/zhouminghong/maven-3.9.12/bin/mvn",
+    "java.configuration.maven.executable": "${env:MAVEN_HOME}/bin/mvn",
     "cmake.sourceDirectory": "${workspaceFolder}/be",
     "java.configuration.updateBuildConfiguration": "interactive"
 }

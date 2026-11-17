@@ -7,7 +7,7 @@
             "request": "launch",
             "mainClass": "org.apache.doris.DorisFE",
             "projectName": "fe-core",
-            "javaExec": "/mnt/disk4/zhouminghong/jdk-17.0.10/bin/java",
+            "javaExec": "${env:JAVA_HOME}/bin/java",
             // "args": "-r",
             // Classpath: conf dir first, then doris-fe.jar (must be first among jars),
             // then remaining jars in lib/. Mirrors the order in start_fe.sh.
